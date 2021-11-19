@@ -1,0 +1,10 @@
+name: LagCheck
+author: Novial
+version: 1.0
+main: me.Novial.LagCheck.Main
+description: Check your ram usage
+
+commands:
+  stats:
+    usage: /<command>
+    description: Check your ram stats
