@@ -1,6 +1,6 @@
 name: LagCheck
 author: Novial
-version: 1.2.0
+version: 1.2.1
 main: me.Novial.LagCheck.Main
 description: Check your ram usage
 
