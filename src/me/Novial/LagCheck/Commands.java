@@ -1,8 +1,11 @@
 package me.Novial.LagCheck;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+
 import net.md_5.bungee.api.ChatColor;
 
 public class Commands implements CommandExecutor {
@@ -17,7 +20,7 @@ public class Commands implements CommandExecutor {
 			ChatColor usedMemoryColor = ChatColor.GREEN;
 			
 			double freeMemory = r.freeMemory() / 1000000;
-			ChatColor freeMemoryColor = ChatColor.RED;
+			ChatColor freeMemoryColor = ChatColor.GREEN;
 			
 			double totalMemory = r.totalMemory() / 1000000;
 			double maxMemory = r.maxMemory() / 1000000;
@@ -31,7 +34,7 @@ public class Commands implements CommandExecutor {
 			}
 			else if (usedMemory / totalMemory > 0.8) {
 				usedMemoryColor = ChatColor.RED;
-				freeMemoryColor = ChatColor.GREEN;
+				freeMemoryColor = ChatColor.RED;
 			}
 			
 			if (tpsValue / 20 < 0.8) {
